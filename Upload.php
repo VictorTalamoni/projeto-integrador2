@@ -11,12 +11,16 @@ include('dbconnection.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css.css" />
     <title>TESTE1</title>
+    <style>
+a {
+    text-decoration: none;
+    color: #9370DB;
+  }
+        </style>
 </head>
 <body>
 <div class="campo">
-<h1 id="titulos">Georreferenciamento de Pessoas em Situação de
-Risco</h1>
-<br>
+<h1 id="titulos">Cadastro de pessoas</h1>
 </div>
 
 <form method="POST">
@@ -42,12 +46,15 @@ Risco</h1>
 <div class="button">
 <input type="submit" name="submit" value="Enviar">
 </form>
+<p>
+<h3 style="text-indent: 1%"><a href="index.php"> Página Inicial</a><h3>
 </body>
 <div id="map"></div>
 <script src="script.js"></script>
 <script>
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADRwYSC304AJ3JVGWt
-LyX_-o-bOpcS87g&callback=initMap" async defer></script>
+LyX_-o-bOpcS87g&callback=initMap" async defer>
+</script>
 </body>
 </html>
 
@@ -71,7 +78,7 @@ LyX_-o-bOpcS87g&callback=initMap" async defer></script>
 
         if ($query) {
             echo("<script>alert('Cadastro feito com sucesso!')</script>");
-            echo("<script>window.location = 'Upload.php';</script>");
+            echo("<script>window.location = 'index.php';</script>");
         } 
     }
 }
