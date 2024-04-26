@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    }
+    #titulos{
+    font-family: sans-serif;
+    color: #380B61;
+    margin-left: 7%;
+    }
+    #subtitulos{
+    font-family: sans-serif;
+    color: #380B61;
+    margin-left: 10%;
+    }
+    fieldset{
+    border: 0;
+}
+body{
+    background-color: #F0F8FF;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    margin-left: 6%;
+    margin-top: 2%;
+    justify-content: center;
+    }
+    input, select, textarea, button{
+    border-radius: 5px;
+    }
+    .campo{
+    margin-bottom: 1em;
+    }
+    .campo label{
+    margin-bottom: 0.5em;
+    color: #59429d;
+    display: block;
+    }
+    fieldset.grupo .campo{
+    float: left;
+    margin-right: 5em;
+    }
+    .campo input[type="text"], .campo input[type="email"], .campo select,
+    .campo textarea{
+    padding: 0.2em;
+    border: 1px solid #59429d;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: block;
+    }
+    .campo select option{
+    padding-right: 1em;
+    }
+    .campo input:focus, .campo select:focus, .campo textarea:focus{
+    background: #E0E0F8;
+    }
+div.button{
+    width: 10%;
+    height: 100vh;
+}
+input[type="submit"]{
+    background-color: #59429d;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+}
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+
+input[type="date"]::-webkit-inner-spin-button { 
+    display: none;
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: black;
+}
+
+
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #59429d;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    border:1px solid black;
+    background:white;
+    padding:5px;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+input[type="date"], focus {
+    color: #59429d;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+.form{
+    border: 1px solid #868686;
+        max-height: 20%;
+        max-width: 25%;
+        border-radius: 1.5%;
+        margin-bottom: 1%;
+        display: block;
+        padding: 0.7em;
+        background-color: rgb(228, 212, 255);
+}
+a {
+    text-decoration: none;
+    color: black;
+  }
