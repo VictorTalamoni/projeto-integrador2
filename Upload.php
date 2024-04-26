@@ -38,6 +38,9 @@ a {
             <label for="nomer">Nome do Responsável:</label>
             <input type="tel"  name="nomer" placeholder="Insira o nome do responsável" id="nomer">
 
+            <label for="endereco">Insira seu endereço:</label>
+            <input type="text"  name="endereco" placeholder="Insira o seu endereço aqui" id="endereco">
+
             <label for="foto"> Insira uma Foto :</label>
             <input type="file"  name="foto" id="foto" title="Insira uma foto">
     
@@ -56,6 +59,7 @@ a {
     $numero = $_POST['number'];
     $numeror = $_POST['numberr'];
     $nomer = $_POST['nomer'];
+    $endereco = $_POST['endereco'];
 
     $foto = $_FILES['foto'];
     $pasta = "fotos/";
@@ -77,8 +81,8 @@ a {
         }
         else {
         move_uploaded_file($foto['tmp_name'], $pasta . $novonomedafoto . "." . $extensao);
-        $query = mysqli_query($con, "INSERT INTO pessoas (cpf, nome, telefone, telefone_referencia, titular_numero_referencia, imagem) 
-        VALUES ('$cpf','$nome','$numero','$numeror','$nomer','$fotomy')");
+        $query = mysqli_query($con, "INSERT INTO pessoas (cpf, nome, telefone, telefone_referencia, titular_numero_referencia, imagem, endereco) 
+        VALUES ('$cpf','$nome','$numero','$numeror','$nomer','$fotomy','$endereco')");
         }
 
         if ($query) {

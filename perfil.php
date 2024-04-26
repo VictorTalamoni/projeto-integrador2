@@ -12,6 +12,8 @@
         $telefone_referencia = $row['telefone_referencia'];
         $titular_referencia = $row['titular_numero_referencia'];
         $imagem = "fotos/".$row['imagem'];
+        $endereço = $row['endereco'];
+        $endereço = str_replace(" ", "+", $endereço);
     }
     ?>
     
@@ -41,14 +43,6 @@
                     <div class="header-left">
                         <img src="<?php echo $imagem ?>" width="60%" alt="" class="img-thumbnail rounded-circle mb-2">
                         <h1 class="display-6"> <?php echo $nome ?> </h1>
-                        <h1 class="display-6"> ‎  </h1>
-                        <h1 class="display-6"> ‎ </h1>
-                        <h1 class="display-6"> ‎ </h1>
-                        <h1 class="display-6"> ‎ </h1>
-                        <h1 class="display-6"> ‎ </h1>
-                        <h1 class="display-6"> ‎ </h1>
-                        <h1 class="display-6"> ‎ </h1>
-                        <h1 class="display-6"> ‎ </h1>
                     </div>
                 </div>
                 <div class="col-lg-8 rounded text-dark text-center py-4 px-5 " style="background-color: rgb(242, 253, 245);">
@@ -60,6 +54,7 @@
                         <p> Nome titular de referência: <?php echo $titular_referencia ?> </p>
                         <hr>
                         <p style="vertical-align: bottom">Posicionamento do Mapa</p>
+                        <iframe width="75%" height="400px" src="https://maps.google.com/maps?q=<?php echo $endereço ?>&output=embed"></iframe>
                     </div>
                 </div>
                 </div>
