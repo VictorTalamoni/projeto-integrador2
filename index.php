@@ -4,6 +4,7 @@ $query = "select * from pessoas";
 $result = mysqli_query($con,$query);
 
 ?>
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +34,43 @@ $result = mysqli_query($con,$query);
     <div class="table-responsive">
 <table class="table table-bordered text-center ">
     <tr class="table-success">
+=======
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <style>
+        td{
+            border: 1px solid black;
+            font-weight: bold;
+            text-align: center;
+            line-height: 100%;
+            width: 15%;
+            height: 100%;
+        }
+        table{
+            border: 1px solid black;
+            background-color: #E6E6FA;
+        }
+        a {
+    text-decoration: none;
+    color: #9370DB;
+  }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <title>Página Inicial</title>
+</head>
+<body>
+    <h2>Mostrar pessoas cadastradas </h2>
+    <h3 style="text-indent: 85%"><a href="Upload.php"> Cadastrar novas Pessoas</a><h3>
+    <br/>
+    <table>
+    <tr style="background-color: #9370DB; color:white; height:30px;">
+>>>>>>> c2a12dd3a595883db6101aeafc2829ada1f09901
         <td>CPF</td>
         <td>Nome</td>
         <td>Telefone</td>
@@ -40,7 +78,10 @@ $result = mysqli_query($con,$query);
         <td>Titular do número de referência</td>
         <td> Editar </td>
         <td> Apagar </td>
+<<<<<<< HEAD
         <td> Perfil </td>
+=======
+>>>>>>> c2a12dd3a595883db6101aeafc2829ada1f09901
     </tr>
     <tr>
         <?php
@@ -76,6 +117,7 @@ $result = mysqli_query($con,$query);
             <?php
             $cpf = $row['cpf'];
             ?>
+<<<<<<< HEAD
                 <a href="edit.php?GetID=<?php echo $cpf?>" class="btn btn-success">Editar</a>
         </td>
         <td>
@@ -83,11 +125,18 @@ $result = mysqli_query($con,$query);
         </td>
         <td>
                 <a href="perfil.php?Perfil=<?php echo $cpf?>" class="btn btn-success">Visualizar</a>
+=======
+                <a href="edit.php?GetID=<?php echo $cpf?>">Editar </a>
+        </td>
+        <td>
+                <a href="apagar.php?Del=<?php echo $cpf?>">Apagar </a>
+>>>>>>> c2a12dd3a595883db6101aeafc2829ada1f09901
         </td>
 </tr>
         <?php
             }
         ?>
+<<<<<<< HEAD
     </table>
 </div>
 </div>
@@ -96,5 +145,9 @@ $result = mysqli_query($con,$query);
 </div>
 </div>
 </div>
+=======
+
+    </table>
+>>>>>>> c2a12dd3a595883db6101aeafc2829ada1f09901
 </body>
 </html>
