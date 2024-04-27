@@ -13,7 +13,6 @@
         $titular_referencia = $row['titular_numero_referencia'];
         $imagem = "fotos/".$row['imagem'];
         $endereço = $row['endereco'];
-        $endereço = str_replace(" ", "+", $endereço);
     }
     ?>
     
@@ -54,7 +53,19 @@
                         <p> Nome titular de referência: <?php echo $titular_referencia ?> </p>
                         <hr>
                         <p style="vertical-align: bottom">Posicionamento do Mapa</p>
-                        <iframe width="75%" height="400px" src="https://maps.google.com/maps?q=<?php echo $endereço ?>&output=embed"></iframe>
+                        <?php 
+                        $pesquisa = "select * from pessoas where endereco='".$endereço."'";
+                        $resultado = $con->query($pesquisa);
+
+                        if($resultado->num_rows >0){
+                        $row = $resultado->fetch_assoc();
+                        $endereco2 = $row['endereco'];
+                        echo "<iframe width='75%' height='400px' src='https://maps.google.com/maps?q=" . $endereço . "&output=embed'></iframe>";
+                        }
+                        else {
+                        echo "Nenhum resultado encontrado.";
+                        }
+                        ?>
                     </div>
                 </div>
                 </div>
