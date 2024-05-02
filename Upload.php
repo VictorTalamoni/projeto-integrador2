@@ -9,7 +9,8 @@ include('dbconnection.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./CSS/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/css/bootstrap.min.css" />
+    <script src="css/js/bootstrap.min.js"> </script>
     <title>Upload de Arquivos</title>
     <style>
 a {
@@ -18,36 +19,64 @@ a {
   }
         </style>
 </head>
-<body>
-<div class="container">
-        <h1>Cadastro</h1>
-        <form method="POST" enctype="multipart/form-data">
-            
-            <label for="cpf">CPF:</label>
-            <input type="text"  placeholder="Insira seu CPF" name="cpf" id="cpf" pattern="[0-9]{11}" title="Verifique o número" required>
-    
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" placeholder="Insira seu nome" id="nome" required>
-    
-            <label for="number">Telefone: </label>
-            <input type="tel" name="number" placeholder="Insira seu número de telefone" pattern="[0-9]{11}" title="Verifique o número" id="number">
-    
-            <label for="numberr">Número de Referência: </label>
-            <input type="tel"  name="numberr" placeholder="Insira o número de telefone de um responsável" pattern="[0-9]{11}" title="Verifique o número" id="numberr">
+<body style="background-color: rgb(169, 250, 191);">
 
-            <label for="nomer">Nome do Responsável:</label>
-            <input type="tel"  name="nomer" placeholder="Insira o nome do responsável" id="nomer">
+<nav class="navbar bg-body-tertiary">
+<div class="container-fluid">
+<span class="navbar-brand mb-0 h1 " style="color: green;">Cadastro de Pessoas</span>
+<a class="navbar-brand" href="index.php" style= "color: green;">Página Inicial</a>
+</div>
+</nav>
+<br>
+<br>
 
-            <label for="endereco">Insira seu endereço:</label>
-            <input type="text"  name="endereco" placeholder="Insira o seu endereço aqui" id="endereco">
-
-            <label for="foto"> Insira uma Foto :</label>
-            <input type="file"  name="foto" id="foto" title="Insira uma foto">
+<div class="container p-5 col-sm-8 justify-content-center rounded" style="background-color: rgb(242, 253, 245);">
+    <form method="POST" enctype="multipart/form-data">
+    <center><h1 style="color: green;">Cadastro de Pessoas</h1></center>
+    <hr>
     
-            <input type="submit" value="Enviar" name="submit">
-        </form>
+    <div class="mb-3">
+    <label for="cpf" class="form-label"><strong>CPF: </strong></label>
+    <input type="text" class="form-control col-sm-5" placeholder="Insira seu CPF" name="cpf" id="cpf" pattern="[0-9]{11}" title="Verifique o número" required>
     </div>
-    <h3 style="text-indent: 1%; text-align:center "><a href="index.php"> Página Inicial</a><h3>
+
+    <div class="mb-3">
+    <label for="nome" class="form-label"><strong>Nome: </strong></label>
+    <input type="text" name="nome" class="form-control" placeholder="Insira seu nome" id="nome" required>
+    </div>
+
+    <div class="mb-3">
+    <label for="number"  class="form-label"><strong>Telefone: </strong></label>
+    <input type="tel" name="number" class="form-control" placeholder="Insira seu número de telefone" pattern="[0-9]{11}" title="Verifique o número" id="number">
+    </div>
+
+    <div class="mb-3">
+    <label for="numberr" class="form-label"><strong>Número de referência: </strong></label>
+    <input type="tel" name="numberr" class="form-control" placeholder="Insira o número de telefone de um responsável" pattern="[0-9]{11}" title="Verifique o número" id="numberr">
+    </div>
+
+    <div class="mb-3">
+    <label for="nomer" class="form-label"><strong>Nome do responsável: </strong></label>
+    <input type="text" class="form-control" name="nomer" placeholder="Insira o nome do responsável" id="nomer">
+    </div>
+
+    <div class="mb-3">
+    <label for="endereco" class="form-label"><strong>Insira seu endereço: </strong></label>
+    <input type="text" class="form-control" name="endereco" placeholder="Insira o seu endereço aqui" id="endereco">
+    </div>
+
+    <label for="foto" class="form-label"><strong>Insira uma foto: </strong></label>
+    <input type="file"  class="form-control" name="foto" id="foto" title="Insira uma foto">
+
+    <hr>
+    <div class="text-center">
+    <div class="d-grid gap-2 col-2 btn-lg mx-auto">
+    <input class="btn btn-success" type="submit" name="submit" value="Enviar">
+    </div>
+    </div>
+    </form>
+    </div>
+ 
 </body>
 </html>
 

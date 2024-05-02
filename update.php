@@ -8,8 +8,9 @@ require_once("dbconnection.php");
         $numero = $_POST['number'];
         $numeror = $_POST['numberr'];
         $nomer = $_POST['nomer'];
+        $endereco = $_POST['endereco'];
 
-        $query = "update pessoas set nome = '".$nome."', telefone = '".$numero."', telefone_referencia = '".$numeror."', titular_numero_referencia = '".$nomer."' where cpf = '".$cpf."'";
+        $query = "update pessoas set nome = '".$nome."', telefone = '".$numero."', telefone_referencia = '".$numeror."', titular_numero_referencia = '".$nomer."', endereco = '".$endereco."' where cpf = '".$cpf."'";
         $result = mysqli_query($con,$query);
 
         if($result)
